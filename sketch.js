@@ -68,13 +68,13 @@ function draw(){
     stroke("yellow");
     fill("yellow");
     textSize(30);
-    text("Game Over", 230,250)
+    text("Fin del juego", 230,250)
   }
 
 }
 
 function spawnDoors() {
-  //write code here to spawn the doors in the tower
+  //escribir aquí el código para aparecer puertas en la torre
   if (frameCount % 240 === 0) {
     var door = createSprite(200, -50);
     var climber = createSprite(200,10);
@@ -96,13 +96,13 @@ function spawnDoors() {
     ghost.depth = door.depth;
     ghost.depth +=1;
    
-    //assign lifetime to the variable
+    //asignar lifetime a la variable
     door.lifetime = 800;
     climber.lifetime = 800;
     invisibleBlock.lifetime = 800;
 
     
-    //add each door to the group
+    //agregar cada puerta al grupo
     doorsGroup.add(door);
     invisibleBlock.debug = true;
     climbersGroup.add(climber);
